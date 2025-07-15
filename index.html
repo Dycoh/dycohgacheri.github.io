@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dycoh Gacheri| Security Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 50%, #38b2ac 100%);
+        }
+        
+        .skill-bar {
+            transition: width 1.5s ease-in-out;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .network-animation {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .network-animation::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: networkMove 60s linear infinite;
+            z-index: 0;
+        }
+        
+        @keyframes networkMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 1000px 1000px; }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #38b2ac;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #38b2ac; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-xl font-bold text-blue-800">Dycoh Gacheri</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#home" class="text-blue-800 hover:text-blue-600 px-3 py-2 font-medium">Home</a>
+                    <a href="#skills" class="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Skills</a>
+                    <a href="#projects" class="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Projects</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">About</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Contact</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-blue-800 hover:text-blue-600">Home</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600">Skills</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600">Projects</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600">About</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium bg-blue-600 text-white hover:bg-blue-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="network-animation pt-24 pb-16 md:pt-32 md:pb-24 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Dycoh Gacheri</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6 typewriter">Security and Business Analyst </h2>
+                    <p class="text-lg md:text-xl mb-8">Protecting Digital Assets While Driving Data-Driven Business Decisions</p>
+                    <p class="text-blue-100 mb-8">Combining security expertise with business analytics to solve today's digital challenges</p>
+                    
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <div class="bg-white bg-opacity-20 px-4 py-2 rounded-lg">
+                            <p class="font-semibold">BSc Information Technology</p>
+                        </div>
+                        <div class="bg-white bg-opacity-20 px-4 py-2 rounded-lg">
+                            <p class="font-semibold">Penetration Testing</p>
+                        </div>
+                        <div class="bg-white bg-opacity-20 px-4 py-2 rounded-lg">
+                            <p class="font-semibold">Incident Response</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-white text-blue-800 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">Get In Touch</a>
+                        <a href="#" class="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-800 transition duration-300">Download CV</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 bg-white bg-opacity-10 rounded-full flex items-center justify-center floating">
+                        <div class="absolute inset-0 rounded-full border-4 border-white border-opacity-30"></div>
+                        <div class="absolute inset-6 rounded-full border-4 border-white border-opacity-20"></div>
+                        <div class="absolute inset-12 rounded-full border-4 border-white border-opacity-10"></div>
+                        <div class="w-48 h-48 md:w-60 md:h-60 bg-white rounded-full overflow-hidden shadow-xl">
+                            <!-- Placeholder for profile image -->
+                            <div class="w-full h-full bg-gray-300 flex items-center justify-center">
+                                <i class="fas fa-user-shield text-6xl text-blue-800"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6 rounded-lg bg-blue-50">
+                    <div class="text-4xl font-bold text-blue-800 mb-2">BSc IT</div>
+                    <p class="text-gray-600">Technical University of Mombasa Graduate</p>
+                </div>
+                <div class="p-6 rounded-lg bg-green-50">
+                    <div class="text-4xl font-bold text-green-800 mb-2">40%</div>
+                    <p class="text-gray-600">Process Optimization Achievement</p>
+                </div>
+                <div class="p-6 rounded-lg bg-purple-50">
+                    <div class="text-4xl font-bold text-purple-800 mb-2">5+</div>
+                    <p class="text-gray-600">Programming Languages Mastered</p>
+                </div>
+                <div class="p-6 rounded-lg bg-yellow-50">
+                    <div class="text-4xl font-bold text-yellow-800 mb-2">100%</div>
+                    <p class="text-gray-600">Commitment to Security Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">What I Bring to Your Security Team</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-shield-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Threat Detection</h3>
+                    <p class="text-gray-600">Advanced pattern recognition in system behaviors and anomalies to identify potential threats before they escalate.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-search text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Vulnerability Assessment</h3>
+                    <p class="text-gray-600">Hands-on experience with industry-standard pentesting tools to identify and mitigate system vulnerabilities.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-bolt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Incident Response</h3>
+                    <p class="text-gray-600">Analytical approach to investigating security incidents and implementing effective mitigation strategies.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-yellow-600 mb-4">
+                        <i class="fas fa-robot text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Security Automation</h3>
+                    <p class="text-gray-600">Python scripting expertise to automate security processes, reporting, and repetitive security tasks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Technical Expertise</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Comprehensive security toolset and programming skills to address modern cybersecurity challenges</p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800">Security Tools</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Nmap</span>
+                                <span class="text-gray-600">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Burp Suite</span>
+                                <span class="text-gray-600">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar bg-green-600 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Metasploit</span>
+                                <span class="text-gray-600">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar bg-purple-600 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">SIEM Technologies</span>
+                                <span class="text-gray-600">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar bg-yellow-500 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800">Programming & Platforms</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Python</span>
+                                <span class="text-gray-600">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">C/C++</span>
+                                <span class="text-gray-600">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar bg-green-600 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Linux Security</span>
+                                <span class="text-gray-600">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar bg-purple-600 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Windows Hardening</span>
+                                <span class="text-gray-600">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar bg-yellow-500 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <h3 class="text-xl font-semibold mb-6 text-gray-800 text-center">Specializations</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">Penetration Testing</div>
+                    <div class="px-4 py-2 bg-green-100 text-green-800 rounded-full font-medium">Digital Forensics</div>
+                    <div class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full font-medium">Network Security</div>
+                    <div class="px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full font-medium">Security Automation</div>
+                    <div class="px-4 py-2 bg-red-100 text-red-800 rounded-full font-medium">Incident Response</div>
+                    <div class="px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full font-medium">Vulnerability Research</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Security Solutions in Action</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Practical applications of security knowledge in academic and professional projects</p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-blue-600 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">System Monitoring Dashboard</h3>
+                        <p class="text-gray-600 mb-4">Anomaly detection and pattern analysis system for real-time security monitoring.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Python</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Machine Learning</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Data Analysis</span>
+                        </div>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                            View Details <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-green-600 flex items-center justify-center">
+                        <i class="fas fa-file-alt text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Automated Security Reporting</h3>
+                        <p class="text-gray-600 mb-4">Python-based automation for security metrics collection, analysis, and reporting.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Python</span>
+                            <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Automation</span>
+                            <span class="text-xs bg-red-100 text-red-800 px-2 py-1 rounded">Data Visualization</span>
+                        </div>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                            View Details <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-purple-600 flex items-center justify-center">
+                        <i class="fas fa-network-wired text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Network Security Implementation</h3>
+                        <p class="text-gray-600 mb-4">Academic and practical configurations for secure network architectures.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">Network Security</span>
+                            <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Firewalls</span>
+                            <span class="text-xs bg-teal-100 text-teal-800 px-2 py-1 rounded">IDS/IPS</span>
+                        </div>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                            View Details <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300">
+                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Credentials -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">About Me</h2>
+                    <p class="text-gray-600 mb-6">
+                        Emerging Security Analyst with a strong technical foundation from the Technical University of Mombasa. 
+                        Currently enhancing my expertise through the CyberShujaa Security Analyst Program, focusing on 
+                        penetration testing and incident response.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        My approach combines technical skills with analytical thinking to identify vulnerabilities and 
+                        implement robust security solutions. I'm passionate about staying ahead of evolving cyber threats 
+                        and implementing proactive security measures.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="flex items-center text-blue-600 hover:text-blue-800">
+                            <i class="fab fa-linkedin text-xl mr-2"></i> LinkedIn
+                        </a>
+                        <a href="#" class="flex items-center text-gray-800 hover:text-gray-600">
+                            <i class="fab fa-github text-xl mr-2"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-6 text-gray-800">Credentials & Certifications</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <i class="fas fa-graduation-cap text-blue-600"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">BSc Information Technology</h4>
+                                    <p class="text-gray-600">Technical University of Mombasa</p>
+                                    <p class="text-sm text-gray-500">2019 - 2023</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-12 w-12 rounded-full bg-green-100 flex items-center justify-center">
+                                    <i class="fas fa-certificate text-green-600"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">CyberShujaa Security Analyst</h4>
+                                    <p class="text-gray-600">Ongoing Certification Program</p>
+                                    <p class="text-sm text-gray-500">2023 - Present</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-12 w-12 rounded-full bg-purple-100 flex items-center justify-center">
+                                    <i class="fas fa-shield-alt text-purple-600"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Penetration Testing</h4>
+                                    <p class="text-gray-600">Practical Experience with Industry Tools</p>
+                                    <p class="text-sm text-gray-500">Nmap, Burp Suite, Metasploit</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Focus -->
+    <section class="py-12 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xl font-semibold mb-2">Currently Mastering</h3>
+            <div class="text-2xl md:text-3xl font-bold mb-4" id="rotating-skills">Cloud Security Architecture</div>
+            <p class="max-w-3xl mx-auto">Continuously expanding my knowledge to stay ahead of evolving cybersecurity threats and technologies.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Let's Secure Your Digital Future Together</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Available for security analyst positions, consulting, and freelance security projects</p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-blue-800 text-white p-12">
+                        <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+                        <p class="mb-8">I'm currently available for security analyst roles, penetration testing projects, and security consultations. Reach out to discuss how I can contribute to your security needs.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Location</h4>
+                                    <p>Kenya-based | Available for Remote & On-site</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p>contact@dycohgacheri.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-semibold">Phone</h4>
+                                    <p>+254 7XX XXX XXX</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold mb-4">Connect With Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="h-10 w-10 rounded-full bg-blue-700 flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="h-10 w-10 rounded-full bg-blue-700 flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="h-10 w-10 rounded-full bg-blue-700 flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-12">
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">
+                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="flex justify-center md:order-2 space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <div class="mt-8 md:mt-0 md:order-1">
+                    <p class="text-center text-gray-400">&copy; 2023 Dycoh Gacheri. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Rotating skills text
+        const skills = [
+            "Cloud Security Architecture",
+            "Advanced Threat Intelligence",
+            "Zero Trust Security Models",
+            "IoT Security Protocols",
+            "AI in Cybersecurity"
+        ];
+        
+        let currentSkill = 0;
+        const skillElement = document.getElementById('rotating-skills');
+        
+        function rotateSkill() {
+            currentSkill = (currentSkill + 1) % skills.length;
+            skillElement.style.opacity = 0;
+            
+            setTimeout(() => {
+                skillElement.textContent = skills[currentSkill];
+                skillElement.style.opacity = 1;
+            }, 500);
+        }
+        
+        setInterval(rotateSkill, 3000);
+
+        // Animate skill bars on scroll
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        }
+
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.id === 'skills' || entry.target.classList.contains('skill-section')) {
+                        animateSkillBars();
+                    }
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
